@@ -1,0 +1,25 @@
+.App {
+	height: inherit;
+	width: inherit;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Header,
+.Main,
+.Footer {
+	width: 100%;
+	display: flex;
+}
+
+.Header,
+.Footer {
+	height: 100px;
+	flex: 0;
+}
+
+.Main {
+	flex: 1;
+}
