@@ -1,23 +1,19 @@
 :root {
 	/* Colors */
-	--purple-100: #e4e7fb;
-	--purple-200: #d5daff;
-	--purple-300: #575090;
-	--purple-400: #554e8f;
-	--pink: #d10263;
-	--red-100: #ffcfcf;
-	--red-200: #fb3f3f;
-	--blue-300: #3044f2;
-	--blue-200: #5f87e7;
-	--blue-100: #91abc0;
-	--green: #1ed102;
-	--lime: #91dc5a;
+	--white: #ffffff;
+	--white-100: #f9fcff;
+	--white-200: #0000000d;
+	--gray-100: #d9d9d9;
+	--gray-200: #c6c6c8;
+	--gray-200: #b5b5b5;
 	--yellow: #ffd506;
-	--orange: #f29130;
-	--white: #f9fcff;
-	--gray: #dadada;
+	--green: #1ed102;
+	--pink: #d10263;
+	--purple-100: #8b87b3;
+	--purple-200: #554e8f;
 	/* Font */
-	--font: 'Nunito Sans', sans-serif;
+	--font-main: 'Nunito Sans', sans-serif;
+	--font-secondary: 'Rubik', sans-serif;
 }
 
 #root {

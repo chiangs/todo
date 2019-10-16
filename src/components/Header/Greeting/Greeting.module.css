@@ -1,0 +1,10 @@
+.Greeting {
+	--font: var(--font-secondary);
+	--font-color: var(--white);
+}
+
+.Greeting {
+	display: block;
+	font-family: var(--font);
+	color: var(--font-color);
+}

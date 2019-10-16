@@ -1,37 +1,57 @@
 {
-  "name": "todo",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@types/jest": "24.0.19",
-    "@types/node": "12.11.1",
-    "@types/react": "16.9.7",
-    "@types/react-dom": "16.9.2",
-    "normalize.css": "^8.0.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0",
-    "typescript": "3.6.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "todo",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@storybook/addon-storysource": "^5.2.4",
+		"@types/node": "12.11.1",
+		"@types/react": "16.9.7",
+		"@types/react-dom": "16.9.2",
+		"normalize.css": "^8.0.1",
+		"react": "^16.10.2",
+		"react-dom": "^16.10.2",
+		"react-scripts": "3.2.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook -c .storybook -o .out"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.6.4",
+		"@storybook/addon-actions": "^5.2.4",
+		"@storybook/addon-info": "^5.2.4",
+		"@storybook/addon-links": "^5.2.4",
+		"@storybook/addons": "^5.2.4",
+		"@storybook/react": "^5.2.4",
+		"@types/enzyme": "^3.10.3",
+		"@types/jest": "^24.0.19",
+		"awesome-typescript-loader": "^5.2.1",
+		"babel-loader": "^8.0.6",
+		"enzyme": "^3.10.0",
+		"enzyme-adapter-react-16": "^1.15.1",
+		"enzyme-to-json": "^3.4.2",
+		"jest": "^24.9.0",
+		"react-docgen-typescript-loader": "^3.3.0",
+		"ts-jest": "^24.1.0",
+		"typescript": "^3.6.4"
+	}
 }

@@ -3,21 +3,24 @@ import * as React from 'react';
 
 /** Import Test Environment */
 import { ShallowWrapper } from 'enzyme';
-import { findByTestAttr, setup } from '../../_utils/testing.utils';
+import { setup, findByTestAttr } from '../../../_utils/testing.utils';
 
 /** Import Tested Component */
-import Header from './Header';
+import Greeting from './Greeting';
 
-describe('<Header />', () => {
+describe('<Greeting />', () => {
 	describe('default', () => {
 		let wrapper: ShallowWrapper;
 
 		beforeAll(() => {
-			wrapper = setup(<Header />);
+			const mockProps = {
+				name: 'Test'
+			};
+			wrapper = setup(<Greeting {...mockProps} />);
 		});
 
 		it('should render itself', () => {
-			const component = findByTestAttr(wrapper, 'component-header');
+			const component = findByTestAttr(wrapper, 'component-greeting');
 			expect(component).toHaveLength(1);
 		});
 	});

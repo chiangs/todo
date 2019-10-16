@@ -2,22 +2,23 @@
 import * as React from 'react';
 
 /** Import Test Environment */
-import { shallow, ShallowWrapper } from 'enzyme';
+import { ShallowWrapper } from 'enzyme';
+import { findByTestAttr, setup } from '../../_utils/testing.utils';
 
 /** Import Tested Component */
 import Footer from './Footer';
 
 describe('<Footer />', () => {
-
 	describe('default', () => {
-		let html: ShallowWrapper;
+		let wrapper: ShallowWrapper;
 
 		beforeAll(() => {
-			html = shallow(<Footer />);
+			wrapper = setup(<Footer />);
 		});
 
-		it('should render a <div />', () => {
-			expect(html.contains(<div />)).toBe(true);
+		it('should render itself', () => {
+			const component = findByTestAttr(wrapper, 'component-footer');
+			expect(component).toHaveLength(1);
 		});
 	});
 });
