@@ -14,6 +14,11 @@
 	/* Font */
 	--font-main: 'Nunito Sans', sans-serif;
 	--font-secondary: 'Rubik', sans-serif;
+	/* Units */
+	--unit: 5px;
+	--single: calc(var(--unit) * 1);
+	--double: calc(var(--unit) * 2);
+	--quad: calc(var(--unit) * 4);
 }
 
 #root {
@@ -118,5 +123,62 @@ noscript {
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
+	}
+}
+
+/* Responsive font */
+@media (min-width: 300px) {
+	/* 14px @ 480px increasing to 18px @ 1920px */
+	:root {
+		font-size: calc(0.8rem + ((1vw - 4.8px) * 0.2));
+		/* Where: * 0.2778 = 100 * font_Size_Difference / viewport_Width_Difference */
+	}
+	/* 40px @ 480px increasing to 50px @ 1920px */
+	h1 {
+		font-size: calc(1.8rem + ((1vw - 4.8px) * 1.0417));
+	}
+	/* 20px @ 480px increasing to 30px @ 1920px */
+	h2 {
+		font-size: calc(1.2rem + ((1vw - 4.8px) * 0.6944));
+	}
+	/* 20px @ 480px increasing to 25px @ 1920px */
+	h3 {
+		font-size: calc(1.2rem + ((1vw - 4.8px) * 0.3472));
+	}
+	/* 16px @ 480px increasing to 20px @ 1920px */
+	h4 {
+		font-size: calc(1rem + ((1vw - 4.8px) * 0.2778));
+	}
+	/* 14px @ 480px increasing to 16px @ 1920px */
+	.label {
+		font-size: calc(1.4rem + ((1vw - 4.8px) * 0.3472));
+	}
+	.hint {
+		font-size: calc(0.8rem + ((1vw - 4.8px) * 0.1389));
+		/* Where: * 0.1389 = 100 * font_Size_Difference / viewport_Width_Difference */
+	}
+}
+/* Prevent font scaling beyond this breakpoint */
+@media (min-width: 1920px) {
+	:root {
+		font-size: 18px;
+	}
+	h1 {
+		font-size: 45px;
+	}
+	h2 {
+		font-size: 30px;
+	}
+	h3 {
+		font-size: 25px;
+	}
+	h4 {
+		font-size: 20px;
+	}
+	.label {
+		font-size: 17px;
+	}
+	.hint {
+		font-size: 10px;
 	}
 }

@@ -1,0 +1,9 @@
+.Status {
+	--font: var(--font-secondary);
+	--font-color: var(--white);
+}
+
+.Status {
+	font-family: var(--font);
+	color: var(--font-color);
+}

@@ -1,0 +1,10 @@
+.UserProfilePic {
+	width: 90px;
+	position: relative;
+}
+
+.UserProfilePic img {
+	position: absolute;
+	top: calc(-4 * var(--double));
+	right: calc(-2.5 * var(--double));
+}

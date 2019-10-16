@@ -1,27 +1,20 @@
 import * as React from 'react';
+import css from './UserProfilePicture.module.css';
 
-/** Stylesheet Imports */
-import './UserProfilePicture.css';
+type Props = {
+	userProfilePicPath: string;
+	userName: string;
+};
 
-export interface Props {
-	children?: React.ReactNode
-}
+const UserProfilePicture: React.FC<Props> = ({
+	userProfilePicPath,
+	userName
+}) => {
+	return (
+		<section data-test='component-user-pic' className={css.UserProfilePic}>
+			<img src={userProfilePicPath} alt={userName} />
+		</section>
+	);
+};
 
-export interface State {
-}
-
-export default class UserProfilePicture extends React.Component<Props, State> {
-
-	constructor(props: Props) {
-		super(props)
-
-		this.state = {
-		}
-	}
-
-	render() {
-		return (
-			<div>{ this.props.children }</div>
-		)
-	}
-}
+export default UserProfilePicture;

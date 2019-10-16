@@ -1,27 +1,20 @@
 import * as React from 'react';
+import css from './Status.module.css';
 
-/** Stylesheet Imports */
-import './Status.css';
+type Props = {
+	numberOfTasks: number;
+};
 
-export interface Props {
-	children?: React.ReactNode
-}
+const Status: React.FC<Props> = ({ numberOfTasks }) => {
+	const taskCount: string | number =
+		numberOfTasks === 0 ? `no` : numberOfTasks;
+	const statusMessage: string = `Today you have ${taskCount} tasks`;
+	const styles = [css.Status, 'hint'].join(' ');
+	return (
+		<p data-test='component-status' className={styles}>
+			{statusMessage}
+		</p>
+	);
+};
 
-export interface State {
-}
-
-export default class Status extends React.Component<Props, State> {
-
-	constructor(props: Props) {
-		super(props)
-
-		this.state = {
-		}
-	}
-
-	render() {
-		return (
-			<div>{ this.props.children }</div>
-		)
-	}
-}
+export default React.memo(Status);

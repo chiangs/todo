@@ -1,23 +1,29 @@
 /** Import React */
 import * as React from 'react';
+import img from '../../../assets/Photo.png';
 
 /** Import Test Environment */
-import { shallow, ShallowWrapper } from 'enzyme';
+import { ShallowWrapper } from 'enzyme';
+import { setup, findByTestAttr } from '../../../_utils/testing.utils';
 
 /** Import Tested Component */
 import UserProfilePicture from './UserProfilePicture';
 
 describe('<UserProfilePicture />', () => {
-
 	describe('default', () => {
-		let html: ShallowWrapper;
+		let wrapper: ShallowWrapper;
 
 		beforeAll(() => {
-			html = shallow(<UserProfilePicture />);
+			const mockProps = {
+				userProfilePicPath: img,
+				userName: `Brenda`
+			};
+			wrapper = setup(<UserProfilePicture {...mockProps} />);
 		});
 
-		it('should render a <div />', () => {
-			expect(html.contains(<div />)).toBe(true);
+		it('should render itself', () => {
+			const component = findByTestAttr(wrapper, 'component-user-pic');
+			expect(component).toHaveLength(1);
 		});
 	});
 });

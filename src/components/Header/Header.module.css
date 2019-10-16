@@ -1,2 +1,11 @@
 .Header {
+	height: 106px;
+	width: 100%;
+	padding: var(--single) var(--quad);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: url('../../assets/background.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
