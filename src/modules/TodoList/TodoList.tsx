@@ -8,6 +8,7 @@ import { Todo } from '_types/types';
 // import { initialState, todoReducer } from './store/reducer';
 import css from './TodoList.module.css';
 import TodoListSection from './TodoListSection';
+import { setUpdatedCollection } from '_services/object.service';
 
 type Props = {};
 
@@ -34,14 +35,13 @@ const TodoList: React.FC<Props> = props => {
 	}, [todos]);
 
 	const onToggleStatus = (todo: Todo) => {
-		const copy = [...todos];
-		const todoToUpdateIndex = copy.findIndex(item => item.id === todo.id);
-		const todoToUpdate = copy.find(item => item.id === todo.id);
-		const updatedTodo = { ...todoToUpdate, ...todo };
-		copy[todoToUpdateIndex] = updatedTodo;
+		const copy = setUpdatedCollection(todos, todo, 'id');
 		setTodos(copy);
 	};
-	const onDeleteTodo = (todo: Todo) => console.log(`delete ${todo.id}`);
+	const onDeleteTodo = (todo: Todo) => {
+		const copy = setUpdatedCollection(todos, todo, 'id', true);
+		setTodos(copy);
+	};
 
 	const noTasks = (
 		<section className={css.List__Empty}>
