@@ -1,1 +1,0 @@
-export type Category = 'Personal' | 'Work' | 'Meeting' | 'Study' ;
