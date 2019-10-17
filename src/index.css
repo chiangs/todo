@@ -12,6 +12,9 @@
 	--pink: #d10263;
 	--purple-100: #8b87b3;
 	--purple-200: #554e8f;
+	--red-a100: #ffcfcf;
+	--red: #fb3636;
+	--blue: #3044f2;
 	/* Font */
 	--font-primary: 'Nunito Sans', sans-serif;
 	--font-secondary: 'Rubik', sans-serif;
@@ -20,6 +23,10 @@
 	--single: calc(var(--unit) * 1);
 	--double: calc(var(--unit) * 2);
 	--quad: calc(var(--unit) * 4);
+	/* shadows */
+	--shadow-default: 0px 4px 9px #0000000d;
+	/* borders */
+	--border-radius: 5px;
 }
 
 #root {

@@ -1,0 +1,23 @@
+.ButtonTrash {
+	--gray: var(--gray-100);
+	--red: var(--red);
+	--red-faded: var(--red-a100);
+}
+
+.ButtonTrash {
+	border: none;
+}
+
+.ButtonTrash img {
+	width: 15px;
+	height: 16px;
+}
+
+.ButtonTrash:hover .Trashcan,
+.ButtonTrash:active .Trashcan {
+	width: 27px;
+	height: auto;
+	background-color: var(--red-faded);
+	border-radius: 100%;
+	z-index: 200;
+}

@@ -10,3 +10,5 @@ export type Todo = {
 	status: Status;
 	category: Category;
 };
+
+export type Meridiem = 'AM' | 'PM';

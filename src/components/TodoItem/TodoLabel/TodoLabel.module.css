@@ -1,0 +1,29 @@
+.TodoLabel {
+	--font: var(--font-primary);
+	--font-size: 14px;
+	--color-notdone: var(--purple-200);
+	--color-done: var(--gray-200);
+}
+
+.TodoLabel {
+	flex: 1;
+	display: inline-block;
+	font-family: var(--font);
+	font-size: var(--font-size);
+}
+
+.TodoLabel__Done {
+	color: var(--color-done);
+	text-decoration: line-through;
+}
+
+.TodoLabel__Done::before,
+.TodoLabel__Done::after {
+	content: '\00a0\00a0';
+}
+
+.TodoLabel__NotDone {
+	color: var(--color-notdone);
+}
+
+/* TODO: Focus / Active styles */
