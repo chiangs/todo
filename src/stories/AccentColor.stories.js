@@ -3,7 +3,11 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 import AccentColor from '../components/TodoItem/AccentColor';
 
 export default {
-	title: 'AccentColor'
+	title: 'AccentColor',
+	parameters: {
+		component: AccentColor,
+		componentSubtitle: 'Displays linked color to todo Category'
+	}
 };
 
 const categories = ['Meeting', 'Work', 'Personal', 'Study'];

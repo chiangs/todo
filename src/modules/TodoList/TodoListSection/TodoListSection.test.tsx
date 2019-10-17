@@ -12,7 +12,9 @@ describe('<TodoListSection />', () => {
 	describe('default', () => {
 		let wrapper: ShallowWrapper;
 		const mockProps = {
-			todos: []
+			todos: [],
+			onToggleStatus: jest.fn(),
+			onDeleteTodo: jest.fn()
 		};
 
 		beforeAll(() => {
