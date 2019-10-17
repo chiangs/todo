@@ -140,7 +140,7 @@ noscript {
 	}
 	/* 20px @ 480px increasing to 30px @ 1920px */
 	h2 {
-		font-size: calc(1.2rem + ((1vw - 4.8px) * 0.6944));
+		font-size: calc(1.8rem + ((1vw - 4.8px) * 0.26944));
 	}
 	/* 20px @ 480px increasing to 25px @ 1920px */
 	h3 {

@@ -1,5 +1,6 @@
-import { Status } from './status.type';
-import { Category } from './category.type';
+export type Category = 'Personal' | 'Work' | 'Meeting' | 'Study';
+
+export type Status = 'Done' | 'Not started';
 
 export type Todo = {
 	id: string;

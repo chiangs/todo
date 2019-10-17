@@ -14,18 +14,22 @@
 }
 
 .NoTasks img {
-	max-width: 142px;
+	max-width: 120px;
 	height: auto;
 	margin: calc(var(--single) * 14) 0;
 }
 
 .NoTasks__Title {
 	font-family: var(--font);
+	font-weight: 400;
+	/* font-size: 22px; */
 	color: var(--title-color);
 	margin-bottom: var(--double);
 }
 
 .NoTasks__Status {
 	font-family: var(--font);
+	font-weight: 400;
+	/* font-size: 17px; */
 	color: var(--status-color);
 }
