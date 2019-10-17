@@ -6,14 +6,12 @@ type Props = {
 	todos: Todo[];
 	onToggleStatus: Function;
 	onDeleteTodo: Function;
-	onEditTodo: Function;
 };
 
 const TodoListSection: React.FC<Props> = ({
 	todos,
 	onToggleStatus,
-	onDeleteTodo,
-	onEditTodo
+	onDeleteTodo
 }) => {
 	const section = todos.map(item => (
 		<li key={item.id}>
@@ -21,7 +19,6 @@ const TodoListSection: React.FC<Props> = ({
 				data={item}
 				toggleTodoStatusHandler={onToggleStatus}
 				deleteTodoHandler={onDeleteTodo}
-				editTodoHandler={onEditTodo}
 			/>
 		</li>
 	));

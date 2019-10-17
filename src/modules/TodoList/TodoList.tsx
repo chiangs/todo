@@ -33,9 +33,15 @@ const TodoList: React.FC<Props> = props => {
 		setUpcoming(tomorrowTasks);
 	}, [todos]);
 
-	const onToggleStatus = () => console.log(`toggle`);
-	const onDeleteTodo = () => console.log(`delete`);
-	const onEditTodo = () => console.log(`edit`);
+	const onToggleStatus = (todo: Todo) => {
+		const copy = [...todos];
+		const todoToUpdateIndex = copy.findIndex(item => item.id === todo.id);
+		const todoToUpdate = copy.find(item => item.id === todo.id);
+		const updatedTodo = { ...todoToUpdate, ...todo };
+		copy[todoToUpdateIndex] = updatedTodo;
+		setTodos(copy);
+	};
+	const onDeleteTodo = (todo: Todo) => console.log(`delete ${todo.id}`);
 
 	const noTasks = (
 		<section className={css.List__Empty}>
@@ -51,7 +57,6 @@ const TodoList: React.FC<Props> = props => {
 					todos={current}
 					onToggleStatus={onToggleStatus}
 					onDeleteTodo={onDeleteTodo}
-					onEditTodo={onEditTodo}
 				/>
 			</section>
 			<section>
@@ -60,7 +65,6 @@ const TodoList: React.FC<Props> = props => {
 					todos={upcoming}
 					onToggleStatus={onToggleStatus}
 					onDeleteTodo={onDeleteTodo}
-					onEditTodo={onEditTodo}
 				/>
 			</section>
 		</section>
