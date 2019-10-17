@@ -9,6 +9,9 @@ export const getTimeFromDate = (date: Date): number[] => {
 export const getMeridiemFromTime = (hours: number): Meridiem =>
 	hours < 11 ? 'AM' : 'PM';
 
+export const convertToMerdiem = (hours: number): number =>
+	hours >= 12 ? hours - 12 : hours;
+
 export const converTimeToString = (timeSection: number): string =>
 	timeSection >= 10 ? timeSection.toString() : `0${timeSection}`;
 
