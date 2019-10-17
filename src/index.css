@@ -5,14 +5,15 @@
 	--white-200: #0000000d;
 	--gray-100: #d9d9d9;
 	--gray-200: #c6c6c8;
-	--gray-200: #b5b5b5;
+	--gray-300: #b5b5b5;
+	--gray-400: #82a0b7;
 	--yellow: #ffd506;
 	--green: #1ed102;
 	--pink: #d10263;
 	--purple-100: #8b87b3;
 	--purple-200: #554e8f;
 	/* Font */
-	--font-main: 'Nunito Sans', sans-serif;
+	--font-primary: 'Nunito Sans', sans-serif;
 	--font-secondary: 'Rubik', sans-serif;
 	/* Units */
 	--unit: 5px;
