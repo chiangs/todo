@@ -40,8 +40,20 @@
 	margin-bottom: var(--list-margin-bottom);
 }
 
+.AddTaskActions {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
 @media (min-width: 500px) {
 	.List {
 		padding: 0 10vw;
+	}
+}
+
+@media (min-width: 1000px) {
+	.List {
+		padding: 0 25vw;
 	}
 }

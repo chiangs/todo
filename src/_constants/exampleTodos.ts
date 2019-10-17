@@ -43,5 +43,13 @@ export const examples: Todo[] = [
 		dateDue: tomorrow,
 		status: 'Not started',
 		category: 'Study'
+	},
+	{
+		id: 'test6',
+		task: 'Secret ninja meetup',
+		dateCreated: tomorrow,
+		dateDue: tomorrow,
+		status: 'Not started',
+		category: 'Meeting'
 	}
 ];

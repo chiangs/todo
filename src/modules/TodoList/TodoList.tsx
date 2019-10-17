@@ -1,4 +1,4 @@
-import { NoTasks } from 'components';
+import { NoTasks, ButtonPlus } from 'components';
 import React, { useEffect, useState } from 'react';
 import { CURRENT, UPCOMING } from '_constants/constants';
 import { examples } from '_constants/exampleTodos';
@@ -42,6 +42,7 @@ const TodoList: React.FC<Props> = props => {
 		const copy = setUpdatedCollection(todos, todo, 'id', true);
 		setTodos(copy);
 	};
+	const onAddTask = () => console.log(`Show task form`);
 
 	const noTasks = (
 		<section className={css.List__Empty}>
@@ -73,6 +74,9 @@ const TodoList: React.FC<Props> = props => {
 	return (
 		<article data-test='component-todolist' className={css.TodoList}>
 			{todos.length > 0 ? list : noTasks}
+			<section className={css.AddTaskActions}>
+				<ButtonPlus clickHandler={onAddTask} />
+			</section>
 		</article>
 	);
 };
