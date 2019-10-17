@@ -5,20 +5,28 @@
 	--white-200: #0000000d;
 	--gray-100: #d9d9d9;
 	--gray-200: #c6c6c8;
-	--gray-200: #b5b5b5;
+	--gray-300: #b5b5b5;
+	--gray-400: #82a0b7;
 	--yellow: #ffd506;
 	--green: #1ed102;
 	--pink: #d10263;
 	--purple-100: #8b87b3;
 	--purple-200: #554e8f;
+	--red-a100: #ffcfcf;
+	--red: #fb3636;
+	--blue: #3044f2;
 	/* Font */
-	--font-main: 'Nunito Sans', sans-serif;
+	--font-primary: 'Nunito Sans', sans-serif;
 	--font-secondary: 'Rubik', sans-serif;
 	/* Units */
 	--unit: 5px;
 	--single: calc(var(--unit) * 1);
 	--double: calc(var(--unit) * 2);
 	--quad: calc(var(--unit) * 4);
+	/* shadows */
+	--shadow-default: 0px 4px 9px #0000000d;
+	/* borders */
+	--border-radius: 5px;
 }
 
 #root {
@@ -139,7 +147,7 @@ noscript {
 	}
 	/* 20px @ 480px increasing to 30px @ 1920px */
 	h2 {
-		font-size: calc(1.2rem + ((1vw - 4.8px) * 0.6944));
+		font-size: calc(1.8rem + ((1vw - 4.8px) * 0.26944));
 	}
 	/* 20px @ 480px increasing to 25px @ 1920px */
 	h3 {

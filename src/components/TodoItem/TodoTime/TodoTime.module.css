@@ -1,0 +1,17 @@
+.TodoTime {
+	--color: var(--gray-200);
+	--font: var(--font-primary);
+}
+
+.TodoTime {
+	flex: 0;
+	font-family: var(--font);
+	color: var(--color);
+	margin: 0 var(--single) 0 0;
+}
+
+@media (min-width: 500px) {
+	.TodoTime {
+		margin: 0 var(--double) 0 0;
+	}
+}

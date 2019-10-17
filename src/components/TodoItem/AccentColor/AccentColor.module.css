@@ -1,0 +1,26 @@
+.Accent {
+	--border-radius: var(--border-radius);
+}
+
+.Accent {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	border-radius: var(--border-radius);
+}
+
+.Accent__Green {
+	background-color: var(--green);
+}
+
+.Accent__Pink {
+	background-color: var(--pink);
+}
+
+.Accent__Blue {
+	background-color: var(--blue);
+}
+
+.Accent__Yellow {
+	background-color: var(--yellow);
+}

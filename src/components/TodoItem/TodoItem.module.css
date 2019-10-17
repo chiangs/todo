@@ -1,0 +1,38 @@
+.TodoItem {
+	--color-bg: var(--white);
+	--shadow: var(--shadow-default);
+	--br: var(--border-radius);
+	--height: 55px;
+}
+
+.TodoItem {
+	min-width: 300px;
+	max-width: 800px;
+	min-height: var(--height);
+	padding: 0 var(--double) 0 0;
+	background-color: var(--color-bg);
+	box-shadow: var(--shadow);
+	border-radius: var(--br);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.TodoItem > *:nth-child(1) {
+	flex: 0;
+	min-width: 4px;
+	max-width: 4px;
+	min-height: var(--height);
+	display: inline-block;
+	border-radius: var(--br) 0 0 var(--br);
+}
+
+.TodoItem__Content {
+	flex: 1;
+	width: calc(100% - 4px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--color-bg);
+}

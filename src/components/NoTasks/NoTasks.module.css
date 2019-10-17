@@ -1,0 +1,35 @@
+.NoTasks {
+	--font: var(--font-primary);
+	--title-color: var(--purple-200);
+	--status-color: var(--gray-400);
+}
+
+.NoTasks {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.NoTasks img {
+	max-width: 120px;
+	height: auto;
+	margin: calc(var(--single) * 14) 0;
+}
+
+.NoTasks__Title {
+	font-family: var(--font);
+	font-weight: 400;
+	/* font-size: 22px; */
+	color: var(--title-color);
+	margin-bottom: var(--double);
+}
+
+.NoTasks__Status {
+	font-family: var(--font);
+	font-weight: 400;
+	/* font-size: 17px; */
+	color: var(--status-color);
+}
