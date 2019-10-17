@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import css from './ButtonTrash.module.css';
 import trashcan from '../../assets/trash.svg';
+import trashcanRed from '../../assets/trashRed.svg';
 
 type Props = {
 	clickHandler: Function;
@@ -8,20 +9,23 @@ type Props = {
 
 const ButtonTrash: React.FC<Props> = ({ clickHandler }) => {
 	const [icon, setIcon] = useState<string>(trashcan);
-	const onButtonClick = () => {
-		const redIcon = '';
-		setIcon(redIcon);
-		setTimeout(() => {
-			clickHandler();
-		}, 500);
+	const onButtonClick = () => clickHandler();
+	const swapTrashcans = () => {
+		const nextIcon = icon === trashcan ? trashcanRed : trashcan;
+		setIcon(nextIcon);
 	};
-
 	return (
 		<button
 			data-test='component-button-trash'
 			type='button'
 			className={css.ButtonTrash}
-			onClick={onButtonClick}>
+			onClick={onButtonClick}
+			onMouseOver={swapTrashcans}
+			onMouseLeave={swapTrashcans}
+			onMouseDown={swapTrashcans}
+			onMouseUp={swapTrashcans}
+			onFocus={swapTrashcans}
+			onBlur={swapTrashcans}>
 			<span className={css.Trashcan}>
 				<img src={icon} alt='remove item' />
 			</span>
