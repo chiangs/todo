@@ -3,7 +3,11 @@ import { action } from '@storybook/addon-actions';
 import TodoItem from '../components/TodoItem';
 
 export default {
-	title: 'Todo Item'
+	title: 'Todo Item',
+	parameters: {
+		component: TodoItem,
+		componentSubtitle: 'Display Todo information'
+	}
 };
 
 const todo = {

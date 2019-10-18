@@ -1,8 +1,17 @@
 .TodoList {
+	--color-bg: var(--white-100);
+	--label-font: var(--font-secondary);
+	--label-color: var(--purple-100);
+	--list-margin-top: calc(var(--single) * 5);
+	--list-margin-bottom: calc(var(--single) * 3);
+}
+
+.TodoList {
 	height: 100%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	background-color: var(--color-bg);
 }
 
 .List__Empty {
@@ -10,4 +19,41 @@
 	align-self: flex-start;
 	margin: 0 auto;
 	padding-top: 5vh;
+}
+
+.List {
+	width: 100%;
+	padding: 0 var(--quad);
+	align-self: center;
+}
+
+.List li {
+	margin-bottom: var(--list-margin-bottom);
+}
+
+.List__Label {
+	font-family: var(--label-font);
+	font-weight: 500;
+	font-size: 13px;
+	color: var(--label-color);
+	margin-top: var(--list-margin-top);
+	margin-bottom: var(--list-margin-bottom);
+}
+
+.AddTaskActions {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+@media (min-width: 500px) {
+	.List {
+		padding: 0 10vw;
+	}
+}
+
+@media (min-width: 1000px) {
+	.List {
+		padding: 0 25vw;
+	}
 }

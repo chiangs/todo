@@ -2,7 +2,8 @@ import * as React from 'react';
 import {
 	converTimeToString,
 	getMeridiemFromTime,
-	getTimeFromDate
+	getTimeFromDate,
+	convertToMerdiem
 } from '_services/date.service';
 import { Meridiem } from '_types/types';
 import css from './TodoTime.module.css';
@@ -14,7 +15,8 @@ type Props = {
 const TodoTime: React.FC<Props> = ({ date }) => {
 	const [hours, minutes] = getTimeFromDate(date);
 	const meridiem: Meridiem = getMeridiemFromTime(hours);
-	const hoursString = converTimeToString(hours);
+	const hoursMeridiem = convertToMerdiem(hours);
+	const hoursString = converTimeToString(hoursMeridiem);
 	const minutesString = converTimeToString(minutes);
 	const style = [css.TodoTime, 'hint'].join(' ');
 	return (

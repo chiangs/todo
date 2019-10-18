@@ -19,4 +19,4 @@ const TodoLabel: React.FunctionComponent<Props> = ({ text, status }) => {
 	);
 };
 
-export default TodoLabel;
+export default React.memo(TodoLabel);

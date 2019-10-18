@@ -1,7 +1,9 @@
 .ButtonPlus {
+	border: none;
+	padding: 0;
 }
 
 .ButtonPlus img {
-	width: 53px;
-	height: 53px;
+	width: 80px;
+	height: 80px;
 }

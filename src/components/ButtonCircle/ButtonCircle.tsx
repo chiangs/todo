@@ -22,4 +22,4 @@ const ButtonCircle: React.FC<Props> = ({ status, clickHandler }) => {
 	);
 };
 
-export default ButtonCircle;
+export default React.memo(ButtonCircle);

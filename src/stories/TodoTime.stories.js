@@ -2,7 +2,11 @@ import React from 'react';
 import TodoTime from '../components/TodoItem/TodoTime';
 
 export default {
-	title: 'Todo Time'
+	title: 'Todo Time',
+	parameters: {
+		component: TodoTime,
+		componentSubtitle: 'Displays due time of Todo information'
+	}
 };
 
 const dateam = new Date('2015-03-25T00:00:00Z');

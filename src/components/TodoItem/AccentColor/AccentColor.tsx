@@ -4,6 +4,7 @@ import { Category } from '_types/types';
 import { getAccentColorForCategory } from '_services/color.service';
 
 type Props = {
+	/** Category */
 	category: Category;
 };
 
@@ -24,4 +25,8 @@ const AccentColor: React.FC<Props> = ({ category }) => {
 	return <span data-test='component-accent' className={style} />;
 };
 
+/**
+ * Use this accent to highlight the todo item.
+ * The color should be consistently linked to the Category which is set by the color.services file.
+ */
 export default React.memo(AccentColor);

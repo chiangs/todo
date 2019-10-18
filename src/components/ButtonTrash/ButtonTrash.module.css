@@ -2,10 +2,19 @@
 	--gray: var(--gray-100);
 	--red: var(--red);
 	--red-faded: var(--red-a100);
+	--br: 100%;
 }
 
 .ButtonTrash {
 	border: none;
+	border-radius: var(--br);
+}
+
+.ButtonTrash:hover,
+.ButtonTrash:focus,
+.ButtonTrash:active {
+	border-radius: var(--br);
+	background-color: var(--red-faded);
 }
 
 .ButtonTrash img {

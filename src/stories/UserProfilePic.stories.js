@@ -3,7 +3,11 @@ import UserProfilePic from '../components/Header/UserProfilePicture';
 import image from '../assets/Photo.png';
 
 export default {
-	title: 'Header UserProfilePic'
+	title: 'Header UserProfilePic',
+	parameters: {
+		component: UserProfilePic,
+		componentSubtitle: 'Display logged in user profile image.'
+	}
 };
 
 const user = {

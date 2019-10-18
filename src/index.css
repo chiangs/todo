@@ -25,6 +25,7 @@
 	--quad: calc(var(--unit) * 4);
 	/* shadows */
 	--shadow-default: 0px 4px 9px #0000000d;
+	--shadow-focus: 0px 4px 9px #0000000d, 0px 4px 9px #0000000d;
 	/* borders */
 	--border-radius: 5px;
 }
@@ -162,7 +163,7 @@ noscript {
 		font-size: calc(1.4rem + ((1vw - 4.8px) * 0.3472));
 	}
 	.hint {
-		font-size: calc(0.8rem + ((1vw - 4.8px) * 0.1389));
+		font-size: calc(0.9rem + ((1vw - 4.8px) * 0.1389));
 		/* Where: * 0.1389 = 100 * font_Size_Difference / viewport_Width_Difference */
 	}
 }

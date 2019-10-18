@@ -12,11 +12,16 @@
 	font-size: var(--font-size);
 }
 
+.TodoLabel:hover {
+	font-weight: 600;
+}
+
 .TodoLabel__Done {
 	color: var(--color-done);
 	text-decoration: line-through;
 }
 
+.TodoLabel,
 .TodoLabel__Done::before,
 .TodoLabel__Done::after {
 	content: '\00a0\00a0';
