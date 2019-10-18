@@ -19,4 +19,4 @@ const ButtonPlus: React.FC<Props> = ({ clickHandler }) => {
 	);
 };
 
-export default ButtonPlus;
+export default React.memo(ButtonPlus);

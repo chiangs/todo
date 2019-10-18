@@ -1,3 +1,41 @@
+This is a case study project. I was provided a design and some assets and a deadline of 2 days. In the 15 hours I spent on this project, I focused on setting up a good scalable structure, types, generic functions and automated testing. I also integrated Storybook to develop components in isolation as well as provide deployed documentation for the component APIs.
+
+The state of the app is managed using hooks as all components are functional components. I first attempted useReducer, but it wasn't working as expected, so I switch back to useState which is fine for such a small and simple app. Redux would also be an option as complexity increases.
+
+Notable features:
+
+**JavaScript**: Uses TypeScript and functional components only.
+
+**CSS**: Uses CSS custom properties and CSS modules for style scoping. Each CSS module first redeclares all CSS variables used so it's easy to see what variables are used right at the beginning of each CSS module. Standard unit for paddings/margins are used and easily adjusted globally by adjusting one value.
+
+**Testing**: Jest w/ Enzyme for snapshot testing. Most non-render functions are factored out into a service for easier unit testing.
+
+**Development**: Storybook to allow developing components in isolation.
+
+[Link to deployed app](https://todo.chiangs.dev)
+
+[Link to deployed Storybook](https://todostories.chiangs.dev)
+
+## Notes on provided design
+
+- 3 types of fonts, only 1 used one time
+- Unclear hover/focus state for todo item because it is in mobile screen which doesn't have it.
+- Where is the edit ui or is it inline?
+- font sizes are too small
+
+## Improvements
+
+- Check a11y thoroughly
+- Memory improvements
+- Update images to not have padding outside (clip it)
+- Additional documentation in Storybook
+- Improve hover, focus, and active styles
+- Animations
+- Improved responsive font scaling
+- Unit tests for the service methods
+- Additional snapshot testing
+- Possible use moment.js to have more control over Date/Time
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

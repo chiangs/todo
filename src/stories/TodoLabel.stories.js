@@ -3,7 +3,11 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 import TodoLabel from '../components/TodoItem/TodoLabel';
 
 export default {
-	title: 'Todo Label'
+	title: 'Todo Label',
+	parameters: {
+		component: TodoLabel,
+		componentSubtitle: 'Display task of Todo information'
+	}
 };
 
 const statuses = ['Done', 'Not started'];

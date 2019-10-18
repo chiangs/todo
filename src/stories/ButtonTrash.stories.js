@@ -3,7 +3,12 @@ import { action } from '@storybook/addon-actions';
 import { ButtonTrash } from '../components';
 
 export default {
-	title: 'ButtonTrash'
+	title: 'ButtonTrash',
+	parameters: {
+		component: ButtonTrash,
+		componentSubtitle:
+			'Simple button used for when removing or deleting interaction is needed.'
+	}
 };
 
 export const button = () => (
