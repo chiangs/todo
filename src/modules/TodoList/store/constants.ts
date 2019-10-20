@@ -1,1 +1,3 @@
 export const GET_TODOS = 'GET_TODOS';
+export const SET_CURRENT_TODOS = 'SET_CURRENT_TODOS';
+export const SET_UPCOMING_TODOS = 'SET_UPCOMING_TODOS';

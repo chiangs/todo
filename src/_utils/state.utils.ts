@@ -58,4 +58,4 @@ export type ActionsUnion<A extends IActionCreatorsMapObject> = ReturnType<
 >;
 
 export const updatedState = <T>(state: T, updatedProps): T =>
-	Object.assign(state, updatedProps);
+	Object.assign({}, state, updatedProps);
